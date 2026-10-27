@@ -2,10 +2,16 @@
 import os
 import json
 import uuid
+import argparse
+import hashlib
+import re
+import subprocess
+import sys
 from pathlib import Path
-from datetime import datetime
-from zoneinfo import ZoneInfo
+from datetime import date, datetime, timedelta, timezone
 from urllib.request import Request, urlopen
+
+from source_utils import validate_verified, write_json
 
 # 每条：名称｜核心原理｜可复制的提示词｜注意事项
 DATA = """
@@ -81,8 +87,83 @@ for line in DATA.strip().splitlines():
         raise ValueError("策略库格式错误")
     METHODS.append(parts)
 
-TOTAL = len(METHODS) * len(SCENARIOS)
-STATE_FILE = Path("state.json")
+ROOT = Path(__file__).resolve().parent
+STATE_FILE = ROOT / "state.json"
+METHODS_FILE = ROOT / "new_methods.json"
+SHANGHAI = timezone(timedelta(hours=8), "Asia/Shanghai")
+
+
+def name_key(name):
+    return re.sub(r"[\W_]+", "", name.casefold())
+
+
+def builtin_id(index):
+    # Identity follows the method, never the scenario, date, or array position.
+    return "builtin_" + hashlib.sha256(METHODS[index][0].encode()).hexdigest()[:20]
+
+
+def migrate_state(raw):
+    if not isinstance(raw, dict):
+        raise ValueError("state.json 必须是对象；拒绝重置去重记录")
+    state = dict(raw)
+    version = state.get("schema_version", 1)
+    if version not in (1, 2):
+        raise ValueError("无法识别状态版本；拒绝重置去重记录")
+    index = state.get("next_index", 0)
+    if type(index) is not int or index < 0:
+        raise ValueError("next_index 无效；拒绝重置去重记录")
+    if version == 1:
+        # The legacy rotation repeats concepts after the first 42 entries.
+        state["sent_ids"] = [builtin_id(i) for i in range(min(index, len(METHODS)))]
+        state["sent_names"] = [name_key(METHODS[i][0]) for i in range(min(index, len(METHODS)))]
+        state["deliveries"] = []
+        state["pending"] = None
+        state["schema_version"] = 2
+    for key in ("sent_ids", "sent_names", "deliveries"):
+        if not isinstance(state.get(key), list):
+            raise ValueError(f"{key} 无效；拒绝重置去重记录")
+    if any(not isinstance(x, str) or not x for x in state["sent_ids"] + state["sent_names"]):
+        raise ValueError("去重 ID 无效")
+    if state.get("pending") is not None and not isinstance(state["pending"], dict):
+        raise ValueError("发送检查点无效")
+    return state
+
+
+def load_state(path=STATE_FILE):
+    # Missing state is unsafe on an existing installation. Bootstrap explicitly.
+    return migrate_state(json.loads(path.read_text("utf-8")))
+
+
+def load_verified(path=METHODS_FILE, now=None):
+    now = now or datetime.now(timezone.utc)
+    try:
+        library = json.loads(path.read_text("utf-8"))
+        if library.get("schema_version") != 1 or not isinstance(library.get("methods"), list):
+            raise ValueError("新方法库结构无效")
+        result = []
+        ids = set()
+        for method in library["methods"]:
+            if not isinstance(method, dict) or method.get("status") != "verified" or method.get("source_error"):
+                continue
+            try:
+                validate_verified(method)
+                if method["id"] in ids:
+                    raise ValueError("重复方法 ID")
+                published = date.fromisoformat(method["source"]["published_at"])
+                today = now.astimezone(SHANGHAI).date()
+                if not 0 <= (today - published).days <= 90:
+                    continue
+                checked = datetime.fromisoformat(method["last_checked_at"].replace("Z", "+00:00"))
+                if checked.tzinfo is None or not timedelta(0) <= now - checked <= timedelta(hours=36):
+                    continue
+                ids.add(method["id"])
+                result.append(method)
+            except (ValueError, KeyError, TypeError):
+                print("跳过未通过证据校验的新方法", file=sys.stderr)
+        return sorted(result, key=lambda m: (m["source"]["published_at"], m.get("score", 0)), reverse=True)
+    except (OSError, ValueError, TypeError, AttributeError):
+        print("新方法库不可用，回退原策略库", file=sys.stderr)
+        return []
 
 
 def request_json(url, body, token=None):
@@ -100,7 +181,7 @@ def request_json(url, body, token=None):
         return json.load(response)
 
 
-def send_to_feishu(message, key):
+def send_to_feishu(message, key, before_send=lambda: None):
     app_id = os.environ["FEISHU_APP_ID"]
     app_secret = os.environ["FEISHU_APP_SECRET"]
     open_id = os.environ["FEISHU_OPEN_ID"]
@@ -121,16 +202,19 @@ def send_to_feishu(message, key):
         "content": json.dumps({"text": message}, ensure_ascii=False),
         "uuid": str(uuid.uuid5(uuid.NAMESPACE_URL, key))
     }
+    # Persist ambiguity protection after auth, immediately before the side effect.
+    before_send()
     result = request_json(
         "https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type=open_id",
         payload,
         auth["tenant_access_token"]
     )
     if result.get("code") != 0:
-        raise RuntimeError(
-            "飞书发送失败：" + str(result.get("code")) +
-            " " + str(result.get("msg"))
-        )
+        raise RuntimeError("飞书发送失败，错误码：" + str(result.get("code")))
+    message_id = result.get("data", {}).get("message_id")
+    if not message_id:
+        raise RuntimeError("飞书未返回消息 ID，发送结果需人工核对")
+    return message_id
 
 
 def format_card(index):
@@ -145,6 +229,7 @@ def format_card(index):
 
     return (
         f"【{title}】\n"
+        "来源：原有整理策略库｜非最新发布；无原始发布日期\n"
         f"核心原理：{core}\n"
         f"应用场景：{task}\n"
         f"使用方法：将以下提示词发给AI，"
@@ -154,55 +239,180 @@ def format_card(index):
     )
 
 
-def main():
-    today = datetime.now(
-        ZoneInfo("Asia/Shanghai")
-    ).strftime("%Y-%m-%d")
-
-    state = (
-        json.loads(STATE_FILE.read_text("utf-8"))
-        if STATE_FILE.exists() else {}
+def format_new(method, today):
+    source = method["source"]
+    age = (date.fromisoformat(today) - date.fromisoformat(source["published_at"])).days
+    label = "近7天发布·已审核" if age <= 7 else "近期实践·非近7天发布·已审核"
+    steps = "\n".join(f"{i}. {s}" for i, s in enumerate(method["steps"], 1))
+    return (
+        f"【{method['name']}】{label}\n"
+        f"核心原理：{method['principle']}\n"
+        f"应用场景：{'；'.join(method['scenarios'])}\n"
+        f"操作步骤：\n{steps}\n"
+        f"示例提示词（人工整理，非原文引用）：{method['example_prompt']}\n"
+        f"原始来源：{source['name']}｜{source['url']}\n"
+        f"原文发布日期：{source['published_at']}"
     )
 
+
+def choose_methods(state, verified, today):
+    used = set(state["sent_ids"])
+    names = set(state["sent_names"])
+    chosen = []
+    for method in verified:
+        key = method["method_key"]
+        normalized = name_key(method["name"])
+        if method["id"] in used or key in used or normalized in names:
+            continue
+        chosen.append({"id": method["id"], "method_key": key, "name_key": normalized,
+                       "card": format_new(method, today), "kind": "verified"})
+        used.update((method["id"], key))
+        names.add(normalized)
+        if len(chosen) == 3:
+            return chosen
+    for i, (title, *_rest) in enumerate(METHODS):
+        key = builtin_id(i)
+        normalized = name_key(title)
+        if key in used or normalized in names:
+            continue
+        chosen.append({"id": key, "method_key": key, "name_key": normalized,
+                       "card": format_card(i), "kind": "builtin"})
+        used.add(key)
+        names.add(normalized)
+        if len(chosen) == 3:
+            break
+    return chosen
+
+
+def build_pending(state, verified, today):
+    previous = state.get("pending")
+    if previous and previous.get("status") in ("attempted", "unknown"):
+        raise RuntimeError("上次发送结果不明，已暂停；请核对飞书后使用 --resolve，禁止自动补发")
     if state.get("last_sent") == today:
-        print("今天已推送，避免重复发送")
+        return None
+    if previous:
+        if previous.get("status") != "prepared":
+            raise ValueError("未知发送状态，拒绝自动重试")
+        if previous["date"] == today:
+            return previous
+    selected = choose_methods(state, verified, today)
+    if not selected:
+        return None
+    message = (f"🧠 每日AI实用策略 | {today}\n"
+               f"今天精选{len(selected)}种AI使用方法与实践案例\n\n"
+               + "\n\n────────────\n\n".join(item["card"] for item in selected)
+               + "\n\n说明：自动发现的原文须审核后进入推送；新方法不足时补充原策略。"
+                 "原策略及较早实践均不代表当天新发布。")
+    if len(selected) < 3:
+        message += "\n可用且未推送的方法不足3条，本次只发送以上条目，避免重复。"
+    # Feishu text messages have a byte limit; do not truncate away source evidence.
+    if len(json.dumps({"text": message}, ensure_ascii=False).encode("utf-8")) > 19000:
+        raise ValueError("消息过长，请缩短审核内容后再发送")
+    return {"status": "prepared", "date": today, "key": f"feishu-ai-daily-{today}",
+            "items": [{k: v for k, v in item.items() if k != "card"} for item in selected],
+            "message": message}
+
+
+def checkpoint(state, path=STATE_FILE, durable=False):
+    write_json(path, state)
+    if durable:
+        subprocess.run([sys.executable, str(ROOT / "persist.py"), "--state-only"],
+                       cwd=ROOT, check=True)
+
+
+def finish_delivery(state, message_id):
+    pending = state["pending"]
+    state["sent_ids"] = sorted(set(state["sent_ids"]) | {
+        value for item in pending["items"] for value in (item["id"], item["method_key"])})
+    state["sent_names"] = sorted(set(state["sent_names"]) | {
+        item["name_key"] for item in pending["items"]})
+    state["last_sent"] = pending["date"]
+    state["next_index"] = next((i for i in range(len(METHODS))
+                                  if builtin_id(i) not in state["sent_ids"]), len(METHODS))
+    state["deliveries"].append({"date": pending["date"], "key": pending["key"],
+                                "ids": [item["id"] for item in pending["items"]],
+                                "message_id": message_id})
+    state["pending"] = None
+
+
+def deliver(state, today, path=STATE_FILE, sender=send_to_feishu, durable=False):
+    pending = state.get("pending")
+    if not pending:
+        print("没有待发送批次（今天可能已推送，或策略库已耗尽）")
         return
+    if state.get("last_sent") == today:
+        raise RuntimeError("今天已有发送记录，拒绝再次发送")
+    if pending.get("status") != "prepared" or pending.get("date") != today:
+        raise RuntimeError("批次已过期或结果不明，拒绝自动重发")
 
-    index = int(state.get("next_index", 0))
+    def before_send():
+        pending["status"] = "attempted"
+        pending["attempted_at"] = datetime.now(timezone.utc).isoformat()
+        checkpoint(state, path, durable)
 
-    if index + 3 > TOTAL:
-        if not state.get("exhausted_notice"):
-            send_to_feishu(
-                "AI策略库已全部推送，请补充新的策略后继续。",
-                "feishu-ai-daily-exhausted"
-            )
-            state["exhausted_notice"] = True
-            STATE_FILE.write_text(
-                json.dumps(state, ensure_ascii=False, indent=2),
-                encoding="utf-8"
-            )
+    try:
+        message_id = sender(pending["message"], pending["key"], before_send)
+        if pending["status"] != "attempted" or not message_id:
+            raise RuntimeError("发送器未完成检查点或未提供回执")
+    except Exception:
+        if pending["status"] == "attempted":
+            pending["status"] = "unknown"
+            checkpoint(state, path)
+        raise
+    finish_delivery(state, message_id)
+    checkpoint(state, path)
+    print("飞书已返回成功回执，已保存方法 ID 去重记录")
+
+
+def main():
+    parser = argparse.ArgumentParser(description="AI策略推送；默认只预览，不调用飞书")
+    modes = parser.add_mutually_exclusive_group()
+    modes.add_argument("--dry-run", action="store_true")
+    modes.add_argument("--prepare", action="store_true")
+    modes.add_argument("--deliver", action="store_true")
+    modes.add_argument("--resolve", choices=("sent", "not_sent"))
+    modes.add_argument("--list-builtins", action="store_true")
+    parser.add_argument("--note", default="")
+    args = parser.parse_args()
+    if args.list_builtins:
+        for i, method in enumerate(METHODS):
+            print(f"{builtin_id(i)}  {method[0]}")
         return
-
-    cards = [format_card(i) for i in range(index, index + 3)]
-    message = (
-        f"🧠 每日AI实用策略 | {today}\n"
-        "今天精选3种AI使用方法与实践案例\n\n"
-        + "\n\n────────────\n\n".join(cards)
-        + "\n\n说明：来自整理的策略库及场景迁移，"
-          "不代表当天新发布的AI研究。"
-    )
-
-    send_to_feishu(message, f"feishu-ai-daily-{today}")
-
-    state["next_index"] = index + 3
-    state["last_sent"] = today
-    STATE_FILE.write_text(
-        json.dumps(state, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
-    print("成功发送3条AI使用策略至飞书个人私聊")
+    state = load_state()
+    today = datetime.now(SHANGHAI).date().isoformat()
+    if args.resolve:
+        pending = state.get("pending")
+        if not args.note.strip() or not pending or pending.get("status") not in ("attempted", "unknown"):
+            raise ValueError("只有结果不明批次可处理，且必须 --note 记录飞书核对依据")
+        state.setdefault("resolutions", []).append({"key": pending["key"], "result": args.resolve,
+                                                     "note": args.note, "at": datetime.now(timezone.utc).isoformat()})
+        if args.resolve == "sent":
+            finish_delivery(state, "manually-confirmed")
+        else:
+            state["pending"] = None
+        checkpoint(state)
+        print("已记录人工核对结果；请提交 state.json 后再运行 Actions")
+    elif args.deliver:
+        deliver(state, today, durable=os.getenv("REQUIRE_DURABLE_STATE") == "1")
+    else:
+        pending = build_pending(state, load_verified(), today)
+        if args.prepare:
+            state["pending"] = pending
+            checkpoint(state)
+            print("已准备批次" if pending else "今天已推送或无未推送方法；没有新批次")
+        elif pending:
+            print(pending["message"])
+            print("\n[预览：未调用飞书，未修改发送状态]")
+        else:
+            print("今天已推送或无未推送方法；不会重复发送")
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as exc:
+        # Do not print HTTP bodies, credentials, recipient IDs, or request objects.
+        detail = str(exc) if type(exc) in (ValueError, RuntimeError) else "请检查状态检查点和 Actions 步骤"
+        print(f"推送未完成：{type(exc).__name__}：{detail}", file=sys.stderr)
+        sys.exit(1)
 

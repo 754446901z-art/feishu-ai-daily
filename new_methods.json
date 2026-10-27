@@ -1,0 +1,804 @@
+{
+  "schema_version": 1,
+  "methods": [
+    {
+      "id": "source_0e8ed59985c239b011d3",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer",
+        "title": "Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer",
+        "published_at": "2026-10-20",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-20"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "60eaafa35c7f7607aa3832fb733ca62a561efae64fbc5e643451c246dfc6033a",
+        "snippets": [
+          "Engineers often need to answer three questions: Structural integrity: Did graph lowering introduce unintended operators such as extra layout transposes?",
+          "How Arm Used Model Explorer's Visual Debugging Workflows To address these deployment challenges, Arm developed custom adapters for Google AI Edge Model Explorer to support several model formats (i.e., TOSA , VGF , and PTE ), establishing a ",
+          "LiteRT adapter (built-in) PyTorch adapter (built-in) Hugging Face Transformers adapter (built-in) TOSA adapter (Arm plugin) VGF adapter (Arm plugin) PTE adapter (Arm plugin) See User Guide and try out major features: Graph Navigation Split "
+        ]
+      },
+      "review": null,
+      "topics": [
+        "context",
+        "prompting",
+        "workflows"
+      ],
+      "score": 15
+    },
+    {
+      "id": "source_368b6668ab3ae40a13e8",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Preview, edit, and collaborate on markdown (.md) files natively in Google Docs and Drive",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/preview-edit-and-collaborate-on-markdown-md-files-natively-in-google-docs-and-drive",
+        "title": "Preview, edit, and collaborate on markdown (.md) files natively in Google Docs and Drive",
+        "published_at": "2026-10-26",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-26"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "c7ed4cbdd8c1ef8fcbb40825cdd3883fb196d41b2ae4d825d3529ee190d33b2c",
+        "snippets": [
+          "Markdown file usage in Google Drive has surged year-over-year, indicating how critical this format has become for modern, fast-paced workflows.",
+          "Built for human and agent collaboration As AI agents take on larger roles in drafting, planning, and coding, markdown serves as a collaborative common language between humans and AI tools because it is easily readable by both.",
+          "Real-time collaboration: Teammates and AI agents can co-edit the same file to maintain a single source of truth across engineering, product, and AI tools."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "workflows"
+      ],
+      "score": 12
+    },
+    {
+      "id": "source_d9772c24a9a0517734ef",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond",
+        "title": "Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond",
+        "published_at": "2026-10-21",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-21"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "c9adf9b073edddd0e508b5db2c1ffc9b6a0800e7ebf32698767e4de77d1230ca",
+        "snippets": [
+          "The Framework Lock-in Problem Most agent development toolchains available today share a limitation: they are opinionated about one specific framework, and the surrounding capabilities (deployment targets, CI/CD pipelines, evaluation harness",
+          "From the official documentation : Extensions are how you adapt agents-cli to a workflow it doesn't ship with — a different agent framework, an org's deploy policy, or a command of your own — without forking the tool.",
+          "Step 5: Running Evaluations Evaluations in a LangChain project follow the familiar pattern from the ADK walkthrough, with one difference: the eval generate step is overridden to drive the LangChain graph, while the subsequent evaluation ste"
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "workflows"
+      ],
+      "score": 12
+    },
+    {
+      "id": "source_9ae640307e4c2532e538",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Architecting Governed, Self-Evolving AI Agents on Google Cloud",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform",
+        "title": "Architecting Governed, Self-Evolving AI Agents on Google Cloud",
+        "published_at": "2026-10-22",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-22"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "a0d75ffc1655f942199140313879c471c2acff1abc859cc3c78849db2ada42c3",
+        "snippets": [
+          "An on-call engineer battling connection pool starvation does not need an AI agent offering troubleshooting tips or unverified pull requests that might not fix the root cause; they need a governed, self-evolving AI system that can: Diagnose ",
+          "How a Self-Evolving Agent Adapts Over Time Conventional AI agents are frozen at deployment with fixed system prompts and pre-registered tools.",
+          "Every synthesized patch, distilled memory, and topology update must clear four sequential verification boundaries: Ingress & AST Sandbox Sanitization: Before any telemetry alert enters the agent reasoning loop, Model Armor screens payloads "
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "prompting"
+      ],
+      "score": 11
+    },
+    {
+      "id": "source_0490afc86481e7ffbbdd",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon",
+        "title": "Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon",
+        "published_at": "2026-10-20",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-20"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "edb6ed7913c7979a2e7ce23c2895588ce91e45d3f21d3b5952a9e02191a0191e",
+        "snippets": [
+          "You see it first in personal devices like wearables that need to understand context in real time, and increasingly in enterprise and industrial systems like autonomous robots and smart sensors.",
+          "These rely on a continuous flow of context and intelligence across both, working as a model cascade where information is captured and processed in the right place at the right time.",
+          "Because both product families build on the same architecture and compiler foundation, ML teams can optimize a model once and deploy it to a milliwatt-class wearable (Coralboard SR) or a 1 TOPS board (Coralboard SL) using the same workflow."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "context",
+        "prompting"
+      ],
+      "score": 11
+    },
+    {
+      "id": "source_71c8faf7773c477253b1",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Announcing New vLLM and SGLang Inference Engines on TPU",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu",
+        "title": "Announcing New vLLM and SGLang Inference Engines on TPU",
+        "published_at": "2026-10-20",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-20"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "e0d004ec2b944f5ebc9356415f74fd350d1f2c8a60e5b8331535a2265fd1ec25",
+        "snippets": [
+          "Here’s the list of supported features: Agentic & Multi-Turn: Automatic prefix caching, including for hybrid models; KV cache offloading to host memory and Managed Lustre through TPU Sync; tool calling and structured output Interactive & Low",
+          "Both engines keep reusable prefixes in HBM and, with host offload turned on, automatically move older prefixes to host memory as a second tier.",
+          "Alongside these improvements, we have also published new state-of-the-art (SOTA) performance results to AgentX , the project's dedicated track for evaluating agentic long-context and multi-turn workloads."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "workflows"
+      ],
+      "score": 10
+    },
+    {
+      "id": "source_d009dada333dea4ea1eb",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Integrating TorchTPU into TorchTitan and Optimizing Models for TPU",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu",
+        "title": "Integrating TorchTPU into TorchTitan and Optimizing Models for TPU",
+        "published_at": "2026-10-20",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-20"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "9f43918a90cf140edc2ef5acf8dbaef498b42686ce4d7d235140b0e09000fcb8",
+        "snippets": [
+          "In these workflows, TorchTitan handles the parameter update step while synchronizing weights with high-throughput serving engines like vLLM-TorchTPU.",
+          "GraphTrainer also runs optimization passes: to implement graph-based activation memory policy that decides what to save, recompute or offload.",
+          "Optimize Memory and Batch Size Raise the batch."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "workflows"
+      ],
+      "score": 8
+    },
+    {
+      "id": "source_dc1c2bd41b84d39a937b",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec",
+        "title": "Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec",
+        "published_at": "2026-10-22",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-22"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "10d7da585d4226cebb800897dbea7bf973378e1175162cfdcc55711888a7a111",
+        "snippets": [
+          "An agent working through a multi-step task reports progress as it goes.",
+          "These AI gateway capabilities allow teams to monitor, secure and control agentic traffic of tools, models and agents in their ecosystem, and they're delivered as a composable suite so you can choose the right gateway for each use case.",
+          "You can also combine these gateways: API Gateway or Apigee can sit in front of your agents and APIs, or behind Agent Gateway so your agents can reach models, tools, and MCP servers."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents"
+      ],
+      "score": 7
+    },
+    {
+      "id": "source_920832100ebd788851d1",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Run OpenAI agents on a Databricks Sandbox",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/examples/agents_api/sandboxes/databricks/readme",
+        "title": "Run OpenAI agents on a Databricks Sandbox",
+        "published_at": "2026-10-23",
+        "date_evidence": {
+          "kind": "index:published",
+          "value": "2026-10-23",
+          "url": "https://developers.openai.com/cookbook"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "45a409545ad159695a3eb3630107db7287b0f28b4ad1b70ed314be7360de0888",
+        "snippets": [
+          "Databricks Sandbox now supports the OpenAI Agents API , enabling developers to run AI agent code and tool calls in an isolated, serverless environment backed by Databricks’ networking and governance controls.",
+          "With this integration, OpenAI handles agent orchestration while Databricks Sandbox provides on-demand compute for executing code and interacting with tools and enterprise resources.",
+          "Launch codex exec-server inside the sandbox; it connects outbound to OpenAI and waits for tool calls."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents"
+      ],
+      "score": 5
+    },
+    {
+      "id": "source_887ac67d181b8d976c0b",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Native Model Authoring for Edge with LiteRT Tensor API",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api",
+        "title": "Native Model Authoring for Edge with LiteRT Tensor API",
+        "published_at": "2026-10-19",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-19"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "3ca96131cfa0d92019cc69f87c6e442961cac62c10eb5b3f55dee243eb231801",
+        "snippets": [
+          "The LiteRT Tensor API also serves as an ideal programmatic foundation for AI coding agents, providing structured primitives to generate, rewire, and tune model graphs automatically.",
+          "In the rest of this post, we’ll dive into the design and walk through practical code examples showing how to author models from scratch.",
+          "A natural workflow uses both: iterate on the direct XNNPACK path, loading weights straight from the .safetensors checkpoint with no model file to rebuild, then export a .tflite when you're ready to ship with LiteRT on mobile or on the web t"
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "prompting",
+        "workflows"
+      ],
+      "score": 18
+    },
+    {
+      "id": "source_be3b26f0ed9c1a57e728",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Step by Step guide: Build a Voice Agent That Never Goes Silent using ADK",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk",
+        "title": "Step by Step guide: Build a Voice Agent That Never Goes Silent using ADK",
+        "published_at": "2026-10-19",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-19"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "33090a42b5200b7722a47237b816f07de1a737333a6c525ec0b082275ffa1fe0",
+        "snippets": [
+          "In our benchmark sales-report workflow on gemini-3.8-live, switching from a blocking tool to a streaming tool cut the time to the agent's first words from 14.4 seconds to 1.2 seconds.",
+          "Watch the 1-minute ADK Live AI Concierge demo video to hear scheduled responses in action: Sorry, your browser doesn't support playback for this video ADK Live AI Concierge demo video explains how scheduled responses work What Non-Blocking ",
+          "The agent promptly acknowledges the request (\"I'm pulling that report together for you now\"), remains silent during computation, and presents the figures once ready or when the user finishes speaking."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "prompting",
+        "workflows"
+      ],
+      "score": 18
+    },
+    {
+      "id": "source_06a0fe59ff0a3113c225",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Optimizing Customer Support Agents for Cost and Quality",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/examples/agent_optimization/optimizing_agents_for_cost_and_quality",
+        "title": "Optimizing Customer Support Agents for Cost and Quality",
+        "published_at": "2026-09-14",
+        "date_evidence": {
+          "kind": "index:published",
+          "value": "2026-09-14",
+          "url": "https://developers.openai.com/cookbook"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "5253d6f4d467caab9be34ef317b7fca42648cdfdcb8d7894fb20c5b5dcfcb5ef",
+        "snippets": [
+          "Optimization knobs Knob Inefficient baseline Optimized pattern Primary metric Prompt and output Broad “be thorough” instructions and long answers Specific task rules, concise response contract, text.verbosity=\"low\" , capped output Output to",
+          "The important tradeoffs for support agents are: Constraint Pushes you toward Watch out for High policy or account-security risk Larger model on high-risk paths, stricter escalation, judge evals Over-escalation can hurt customer experience a",
+          "before_after = summary[summary[ \"variant\" ].isin([ \"00_bad_baseline\" , \"04_split_workflow\" ])].copy() display( before_after[ [ \"variant_label\" , \"mean_quality\" , \"policy_compliance\" , \"action_accuracy\" , \"escalation_accuracy\" , \"mean_tool_c"
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "prompting",
+        "workflows"
+      ],
+      "score": 18
+    },
+    {
+      "id": "source_117bce9b22cdff7c57f2",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "GPT-Live evaluation guide",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/examples/audio/voice_agent_evaluation",
+        "title": "GPT-Live evaluation guide",
+        "published_at": "2026-09-10",
+        "date_evidence": {
+          "kind": "index:published",
+          "value": "2026-09-10",
+          "url": "https://developers.openai.com/cookbook"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "899464e802360a3313dffb296bbf2891477f5c31caaea6f33f52defa4824f772",
+        "snippets": [
+          "A complete evaluation follows a request through the entire system: the user’s spoken intent, the agent’s conversational behavior, the work delegated, the tools actually executed, the resulting application state, and the result ultimately co",
+          "This guide focuses on continuous, task-focused voice-agent evaluation as prompts, tools, models, and application logic evolve.",
+          "Review production conversations to identify new failure modes, add representative examples to your evaluation set, and rerun them as you improve prompts, tools, and application logic."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "prompting",
+        "workflows"
+      ],
+      "score": 18
+    },
+    {
+      "id": "source_4bf8bb560a77aad5bd9b",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Build a data analyst with the Agents API",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/examples/agents_api/apps/data_analyst/readme",
+        "title": "Build a data analyst with the Agents API",
+        "published_at": "2026-09-10",
+        "date_evidence": {
+          "kind": "index:published",
+          "value": "2026-09-10",
+          "url": "https://developers.openai.com/cookbook"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "dd91a5e7b2813ddfb2458c6678bbca6c4a0cdb699ef580a9b834774917e2035b",
+        "snippets": [
+          "Programmatic tool calling lets the agent combine metadata, business context, saved corrections, and multiple verified queries before responding.",
+          "Memory writing is deferred until the agent needs it: from examples.agents_api.apps.data_analyst.agent import define_tool tools = [ define_tool( \"search_tables\" , \"Find tables and inspect schemas.\" , { \"query\" : { \"type\" : \"string\" }}), defi",
+          "Save an explicit correction Ask the agent to remember a rule, for example: “Remember that enterprise conversion excludes manually provisioned accounts.” The save_memory tool writes the note with a personal or team scope: warehouse.memory.sa"
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "prompting",
+        "workflows"
+      ],
+      "score": 16
+    },
+    {
+      "id": "source_ff44501d216cdf266561",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Redesigning source control at Anthropic",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Anthropic Engineering",
+        "url": "https://www.anthropic.com/research/redesigning-source-control",
+        "title": "Redesigning source control at Anthropic",
+        "published_at": "2026-10-13",
+        "date_evidence": {
+          "kind": "article:published_time",
+          "value": "2026-10-13T00:00:00.000Z"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "584c3a992f92cc9c7225d9258816aefd28f495ac1871996539daa837bf458af0",
+        "snippets": [
+          "With git, a CI job or tool that needs to ask a question about the repository, such as who last changed a line or how two commits are related, has to maintain a local copy of the repo or hope that vendor-specific APIs provide the answer.",
+          "Many internal tools, such as our automated bisect and revert pipelines, wouldn’t be practical at scale without this cheap, programmatic access to source control.",
+          "This project prompted us to take a very hard look at other workflows designed for human scale."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "prompting",
+        "workflows"
+      ],
+      "score": 15
+    },
+    {
+      "id": "source_87fd7f54b8aee9b33c84",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Integrating Sign in with ChatGPT in your Opensource App",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/articles/sign-in-with-chatgpt",
+        "title": "Integrating Sign in with ChatGPT in your Opensource App",
+        "published_at": "2026-09-28",
+        "date_evidence": {
+          "kind": "index:published",
+          "value": "2026-09-28",
+          "url": "https://developers.openai.com/cookbook"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "084bac5a636b760c58778f0be4122fed042b91a3abcb49b2d8a5bc126332b1d1",
+        "snippets": [
+          "You can focus on building a useful harness —the tools, context, and workflows around a model—whether that’s a coding assistant, a research tool, or a desktop utility.",
+          "One installation Paste Perfect on this device Local storage One persistent host ID ext_agent_host_id Created once.",
+          "Paste Perfect’s transformation handler connects this request to the existing paste workflow: it combines the recipe and copied text, checks the completed output, and sends it to the destination app."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "workflows"
+      ],
+      "score": 15
+    },
+    {
+      "id": "source_d526f74ef3e97111adec",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Harness-aware evaluation of plugins",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/examples/partners/harness_aware_plugin_evals/harness_aware_plugin_evals",
+        "title": "Harness-aware evaluation of plugins",
+        "published_at": "2026-09-23",
+        "date_evidence": {
+          "kind": "index:published",
+          "value": "2026-09-23",
+          "url": "https://developers.openai.com/cookbook"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "1f62c17bdcd09c194786d63fa80efe9673949c744f570cd8045a97d9b8cabf84",
+        "snippets": [
+          "Harness: everything around the model at run time, including the agent loop, prompt formatting, tool call execution, turn limits, and sandbox policy.",
+          "The production plugin with live API calls and more tools has a more typical scope, and the evaluation covers 108 questions across 56 BLS surveys.",
+          "The model is the only variable: Model Pass rate Tool calls / question Reasoning tokens / question GPT-6.1 Sol 0.94 4.02 19 GPT-6 Astra 0.94 3.74 14 GPT-6 Luna 0.88 5.54 1,229 Table 1: Pass rates and costs for the production plugin under Cod"
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "prompting",
+        "workflows"
+      ],
+      "score": 13
+    },
+    {
+      "id": "source_f5e13d725d8e83d8d7b4",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Build a Slack bot with the Agents API",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/examples/agents_api/apps/slack_bot/readme",
+        "title": "Build a Slack bot with the Agents API",
+        "published_at": "2026-09-10",
+        "date_evidence": {
+          "kind": "index:published",
+          "value": "2026-09-10",
+          "url": "https://developers.openai.com/cookbook"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "0b8700ce9cd957790e94b112a4e6cc7b2d890db437ea5b1f17691580930015e1",
+        "snippets": [
+          "The Agents API keeps the conversation and tool results in a session, runs the agent, and streams its progress.",
+          "\"\"\" session = await client.beta.agents.sessions.create( agent = { \"model\" : \"gpt-5.6-sol\" , \"instructions\" : instructions, \"reasoning\" : { \"effort\" : \"medium\" }, \"multi_agent\" : { \"enabled\" : True , \"max_concurrent_subagents\" : 3 }, \"tools\"",
+          "from examples.agents_api.apps.slack_bot.tools import slack_handlers parts = [] async with client.beta.agents.sessions.stream( session.id, input = question, tool_handlers = slack_handlers(slack, channel_id), ) as events: async for event in e"
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "workflows"
+      ],
+      "score": 13
+    },
+    {
+      "id": "source_4536d760d84f4198a690",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Run Agents API sandboxes on AWS Lambda MicroVMs",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/examples/agents_api/sandboxes/aws/readme",
+        "title": "Run Agents API sandboxes on AWS Lambda MicroVMs",
+        "published_at": "2026-09-29",
+        "date_evidence": {
+          "kind": "index:published",
+          "value": "2026-09-29",
+          "url": "https://developers.openai.com/cookbook"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "ca045f37288bbf1f35d35ac3effeae0dc198738f48b892d5594e1eb39913b63c",
+        "snippets": [
+          "Use AWS Lambda MicroVMs to run your agent’s tools in your AWS account.",
+          "OpenAI runs the agent harness; each MicroVM runs codex exec-server and holds the session’s workspace files.",
+          "Automatic resume requires inbound VM traffic; Agents API input alone doesn’t wake it."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "workflows"
+      ],
+      "score": 12
+    },
+    {
+      "id": "source_e1ecd3de310d348cea22",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Release ChatGPT usage budgets hourly, daily, or weekly",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/examples/chatgpt/daily_usage_limits/readme",
+        "title": "Release ChatGPT usage budgets hourly, daily, or weekly",
+        "published_at": "2026-09-19",
+        "date_evidence": {
+          "kind": "index:published",
+          "value": "2026-09-19",
+          "url": "https://developers.openai.com/cookbook"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "e628223c202c335f126333170f4269a3e81ee0515205e64c60a342b7d39c24ce",
+        "snippets": [
+          "This runnable example automates ChatGPT Enterprise and Edu usage-limit updates with the ChatGPT Admin API .",
+          "It uses three fictional people and keeps all changes in memory.",
+          "On macOS or Linux, open Terminal, type cd , drag the extracted folder into the window, and press Enter."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "context",
+        "workflows"
+      ],
+      "score": 9
+    },
+    {
+      "id": "source_016ded6b724b8068c274",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Build an SRE agent for incident response",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/examples/agents_api/apps/sev_bot/readme",
+        "title": "Build an SRE agent for incident response",
+        "published_at": "2026-09-10",
+        "date_evidence": {
+          "kind": "index:published",
+          "value": "2026-09-10",
+          "url": "https://developers.openai.com/cookbook"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "evidence": {
+        "text_sha256": "a09431f15503bafc72c5e9fa67d07e5f7a856febd04dedf841e2d7e71e756db1",
+        "snippets": [
+          "\"\"\" session = await client.beta.agents.sessions.create( agent = { \"model\" : \"gpt-5.6-sol\" , \"instructions\" : instructions, \"reasoning\" : { \"effort\" : \"high\" }, \"multi_agent\" : { \"enabled\" : True , \"max_concurrent_subagents\" : 3 }, \"tools\" :",
+          "\"\"\" async with client.beta.agents.sessions.stream( session.id, input = prompt, tool_handlers = handlers, ) as events: async for event in events: if event.type == \"agent.session.turn.output_text.delta\" : print (event.delta, end = \"\" , flush ",
+          "Follow-up questions retain previous evidence, tool results, investigation context, and workspace files."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "workflows"
+      ],
+      "score": 9
+    }
+  ],
+  "discovery": {
+    "checked_at": "2026-10-27T02:19:27+00:00",
+    "source_checks": {
+      "OpenAI Cookbook": 10,
+      "Anthropic Engineering": 10,
+      "Google Developers": 10
+    },
+    "errors": [
+      {
+        "source": "Anthropic Engineering",
+        "url": "https://www.anthropic.com/research/claude-code-auto-mode",
+        "error": "TimeoutError"
+      }
+    ],
+    "note": "Extracted candidates require human review; collection is not factual/semantic approval."
+  }
+}

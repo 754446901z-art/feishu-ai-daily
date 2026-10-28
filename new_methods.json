@@ -2,41 +2,42 @@
   "schema_version": 1,
   "methods": [
     {
-      "id": "source_0e8ed59985c239b011d3",
+      "id": "source_28c8d9a2bd9952a5b018",
       "method_key": null,
       "status": "pending_review",
-      "name": "Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer",
+      "name": "Building Conversational Commerce with Multi-Agent Swarms on GCP: A Working Prototype",
       "principle": null,
       "scenarios": [],
       "steps": [],
       "example_prompt": null,
       "source": {
         "name": "Google Developers",
-        "url": "https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer",
-        "title": "Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer",
-        "published_at": "2026-10-20",
+        "url": "https://developers.googleblog.com/building-conversational-commerce-with-multi-agent-swarms-on-gcp-a-working-prototype",
+        "title": "Building Conversational Commerce with Multi-Agent Swarms on GCP: A Working Prototype",
+        "published_at": "2026-10-27",
         "date_evidence": {
           "kind": "datePublished",
-          "value": "2026-10-20"
+          "value": "2026-10-27"
         }
       },
-      "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "discovered_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
-        "text_sha256": "60eaafa35c7f7607aa3832fb733ca62a561efae64fbc5e643451c246dfc6033a",
+        "text_sha256": "31b717fd271de76d7f9bae9bff671f5f585152c5f3236e3f2739dfa383b225f9",
         "snippets": [
-          "Engineers often need to answer three questions: Structural integrity: Did graph lowering introduce unintended operators such as extra layout transposes?",
-          "How Arm Used Model Explorer's Visual Debugging Workflows To address these deployment challenges, Arm developed custom adapters for Google AI Edge Model Explorer to support several model formats (i.e., TOSA , VGF , and PTE ), establishing a ",
-          "LiteRT adapter (built-in) PyTorch adapter (built-in) Hugging Face Transformers adapter (built-in) TOSA adapter (Arm plugin) VGF adapter (Arm plugin) PTE adapter (Arm plugin) See User Guide and try out major features: Graph Navigation Split "
+          "Contextual Guardrails (Dietary Preferences & Addresses): If a user's profile specifies dietary_preferences: [\"Nut-Free\"] , the Inventory Agent automatically respects that preference when recommending movie night snacks—without the user havi",
+          "Practical Lessons Learned from Building the Prototype Bringing the blueprint into working code revealed several practical realities: Beating the \"Swarm Tax\" (Latency): Multi-agent reasoning across multiple LLM calls can take 2–4 seconds.",
+          "By combining LangGraph for multi-agent workflows, Gemini for natural language reasoning, and GCP for fast ingress and persistent memory, we can build shopping experiences that feel as simple as chatting with a friend while maintaining the e"
         ]
       },
       "review": null,
       "topics": [
+        "agents",
         "context",
         "prompting",
         "workflows"
       ],
-      "score": 15
+      "score": 17
     },
     {
       "id": "source_368b6668ab3ae40a13e8",
@@ -58,7 +59,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "c7ed4cbdd8c1ef8fcbb40825cdd3883fb196d41b2ae4d825d3529ee190d33b2c",
         "snippets": [
@@ -95,7 +96,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "c9adf9b073edddd0e508b5db2c1ffc9b6a0800e7ebf32698767e4de77d1230ca",
         "snippets": [
@@ -110,6 +111,43 @@
         "workflows"
       ],
       "score": 12
+    },
+    {
+      "id": "source_00217b8f4c7c46b76b66",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Fast, reliable A2UI, with swappable inference formats",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/fast-reliable-a2ui",
+        "title": "Fast, reliable A2UI, with swappable inference formats",
+        "published_at": "2026-10-27",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-27"
+        }
+      },
+      "discovered_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "evidence": {
+        "text_sha256": "a010790e3be5ee0650dcd8e0a07074bd71a0c313148f229934405e2d79057658",
+        "snippets": [
+          "With this release, we’re happy to introduce swappable inference formats and share examples on leveraging decision models with A2UI, which help building faster and more reliable generative UI experiences.",
+          "A2UI is an agent-optimized protocol for generative UI, where a client advertises a catalog of trusted components as a contract, an agent sends A2UI messages describing a bespoke user interface composed from that catalog, and the client's re",
+          "You choose the format with one argument when you create the generator: from a2ui.processor import A2uiGenerator, CatalogConfig from a2ui.inference_formats import ExpressFormatFactory catalog = CatalogConfig.from_path(\"catalog.json\") generat"
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "prompting"
+      ],
+      "score": 11
     },
     {
       "id": "source_9ae640307e4c2532e538",
@@ -131,7 +169,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "a0d75ffc1655f942199140313879c471c2acff1abc859cc3c78849db2ada42c3",
         "snippets": [
@@ -147,114 +185,6 @@
         "prompting"
       ],
       "score": 11
-    },
-    {
-      "id": "source_0490afc86481e7ffbbdd",
-      "method_key": null,
-      "status": "pending_review",
-      "name": "Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon",
-      "principle": null,
-      "scenarios": [],
-      "steps": [],
-      "example_prompt": null,
-      "source": {
-        "name": "Google Developers",
-        "url": "https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon",
-        "title": "Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon",
-        "published_at": "2026-10-20",
-        "date_evidence": {
-          "kind": "datePublished",
-          "value": "2026-10-20"
-        }
-      },
-      "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
-      "evidence": {
-        "text_sha256": "edb6ed7913c7979a2e7ce23c2895588ce91e45d3f21d3b5952a9e02191a0191e",
-        "snippets": [
-          "You see it first in personal devices like wearables that need to understand context in real time, and increasingly in enterprise and industrial systems like autonomous robots and smart sensors.",
-          "These rely on a continuous flow of context and intelligence across both, working as a model cascade where information is captured and processed in the right place at the right time.",
-          "Because both product families build on the same architecture and compiler foundation, ML teams can optimize a model once and deploy it to a milliwatt-class wearable (Coralboard SR) or a 1 TOPS board (Coralboard SL) using the same workflow."
-        ]
-      },
-      "review": null,
-      "topics": [
-        "context",
-        "prompting"
-      ],
-      "score": 11
-    },
-    {
-      "id": "source_71c8faf7773c477253b1",
-      "method_key": null,
-      "status": "pending_review",
-      "name": "Announcing New vLLM and SGLang Inference Engines on TPU",
-      "principle": null,
-      "scenarios": [],
-      "steps": [],
-      "example_prompt": null,
-      "source": {
-        "name": "Google Developers",
-        "url": "https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu",
-        "title": "Announcing New vLLM and SGLang Inference Engines on TPU",
-        "published_at": "2026-10-20",
-        "date_evidence": {
-          "kind": "datePublished",
-          "value": "2026-10-20"
-        }
-      },
-      "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
-      "evidence": {
-        "text_sha256": "e0d004ec2b944f5ebc9356415f74fd350d1f2c8a60e5b8331535a2265fd1ec25",
-        "snippets": [
-          "Here’s the list of supported features: Agentic & Multi-Turn: Automatic prefix caching, including for hybrid models; KV cache offloading to host memory and Managed Lustre through TPU Sync; tool calling and structured output Interactive & Low",
-          "Both engines keep reusable prefixes in HBM and, with host offload turned on, automatically move older prefixes to host memory as a second tier.",
-          "Alongside these improvements, we have also published new state-of-the-art (SOTA) performance results to AgentX , the project's dedicated track for evaluating agentic long-context and multi-turn workloads."
-        ]
-      },
-      "review": null,
-      "topics": [
-        "agents",
-        "context",
-        "workflows"
-      ],
-      "score": 10
-    },
-    {
-      "id": "source_d009dada333dea4ea1eb",
-      "method_key": null,
-      "status": "pending_review",
-      "name": "Integrating TorchTPU into TorchTitan and Optimizing Models for TPU",
-      "principle": null,
-      "scenarios": [],
-      "steps": [],
-      "example_prompt": null,
-      "source": {
-        "name": "Google Developers",
-        "url": "https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu",
-        "title": "Integrating TorchTPU into TorchTitan and Optimizing Models for TPU",
-        "published_at": "2026-10-20",
-        "date_evidence": {
-          "kind": "datePublished",
-          "value": "2026-10-20"
-        }
-      },
-      "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
-      "evidence": {
-        "text_sha256": "9f43918a90cf140edc2ef5acf8dbaef498b42686ce4d7d235140b0e09000fcb8",
-        "snippets": [
-          "In these workflows, TorchTitan handles the parameter update step while synchronizing weights with high-throughput serving engines like vLLM-TorchTPU.",
-          "GraphTrainer also runs optimization passes: to implement graph-based activation memory policy that decides what to save, recompute or offload.",
-          "Optimize Memory and Batch Size Raise the batch."
-        ]
-      },
-      "review": null,
-      "topics": [
-        "workflows"
-      ],
-      "score": 8
     },
     {
       "id": "source_dc1c2bd41b84d39a937b",
@@ -276,7 +206,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "10d7da585d4226cebb800897dbea7bf973378e1175162cfdcc55711888a7a111",
         "snippets": [
@@ -312,7 +242,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "45a409545ad159695a3eb3630107db7287b0f28b4ad1b70ed314be7360de0888",
         "snippets": [
@@ -424,7 +354,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "5253d6f4d467caab9be34ef317b7fca42648cdfdcb8d7894fb20c5b5dcfcb5ef",
         "snippets": [
@@ -463,7 +393,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "899464e802360a3313dffb296bbf2891477f5c31caaea6f33f52defa4824f772",
         "snippets": [
@@ -502,7 +432,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "dd91a5e7b2813ddfb2458c6678bbca6c4a0cdb699ef580a9b834774917e2035b",
         "snippets": [
@@ -519,6 +449,43 @@
         "workflows"
       ],
       "score": 16
+    },
+    {
+      "id": "source_0e8ed59985c239b011d3",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer",
+        "title": "Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer",
+        "published_at": "2026-10-20",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-20"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "evidence": {
+        "text_sha256": "60eaafa35c7f7607aa3832fb733ca62a561efae64fbc5e643451c246dfc6033a",
+        "snippets": [
+          "Engineers often need to answer three questions: Structural integrity: Did graph lowering introduce unintended operators such as extra layout transposes?",
+          "How Arm Used Model Explorer's Visual Debugging Workflows To address these deployment challenges, Arm developed custom adapters for Google AI Edge Model Explorer to support several model formats (i.e., TOSA , VGF , and PTE ), establishing a ",
+          "LiteRT adapter (built-in) PyTorch adapter (built-in) Hugging Face Transformers adapter (built-in) TOSA adapter (Arm plugin) VGF adapter (Arm plugin) PTE adapter (Arm plugin) See User Guide and try out major features: Graph Navigation Split "
+        ]
+      },
+      "review": null,
+      "topics": [
+        "context",
+        "prompting",
+        "workflows"
+      ],
+      "score": 15
     },
     {
       "id": "source_ff44501d216cdf266561",
@@ -540,7 +507,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "584c3a992f92cc9c7225d9258816aefd28f495ac1871996539daa837bf458af0",
         "snippets": [
@@ -579,7 +546,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "084bac5a636b760c58778f0be4122fed042b91a3abcb49b2d8a5bc126332b1d1",
         "snippets": [
@@ -617,7 +584,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "1f62c17bdcd09c194786d63fa80efe9673949c744f570cd8045a97d9b8cabf84",
         "snippets": [
@@ -655,7 +622,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "0b8700ce9cd957790e94b112a4e6cc7b2d890db437ea5b1f17691580930015e1",
         "snippets": [
@@ -693,7 +660,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "ca045f37288bbf1f35d35ac3effeae0dc198738f48b892d5594e1eb39913b63c",
         "snippets": [
@@ -709,6 +676,79 @@
         "workflows"
       ],
       "score": 12
+    },
+    {
+      "id": "source_0490afc86481e7ffbbdd",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon",
+        "title": "Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon",
+        "published_at": "2026-10-20",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-20"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "evidence": {
+        "text_sha256": "edb6ed7913c7979a2e7ce23c2895588ce91e45d3f21d3b5952a9e02191a0191e",
+        "snippets": [
+          "You see it first in personal devices like wearables that need to understand context in real time, and increasingly in enterprise and industrial systems like autonomous robots and smart sensors.",
+          "These rely on a continuous flow of context and intelligence across both, working as a model cascade where information is captured and processed in the right place at the right time.",
+          "Because both product families build on the same architecture and compiler foundation, ML teams can optimize a model once and deploy it to a milliwatt-class wearable (Coralboard SR) or a 1 TOPS board (Coralboard SL) using the same workflow."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "context",
+        "prompting"
+      ],
+      "score": 11
+    },
+    {
+      "id": "source_71c8faf7773c477253b1",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Announcing New vLLM and SGLang Inference Engines on TPU",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu",
+        "title": "Announcing New vLLM and SGLang Inference Engines on TPU",
+        "published_at": "2026-10-20",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-20"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "evidence": {
+        "text_sha256": "e0d004ec2b944f5ebc9356415f74fd350d1f2c8a60e5b8331535a2265fd1ec25",
+        "snippets": [
+          "Here’s the list of supported features: Agentic & Multi-Turn: Automatic prefix caching, including for hybrid models; KV cache offloading to host memory and Managed Lustre through TPU Sync; tool calling and structured output Interactive & Low",
+          "Both engines keep reusable prefixes in HBM and, with host offload turned on, automatically move older prefixes to host memory as a second tier.",
+          "Alongside these improvements, we have also published new state-of-the-art (SOTA) performance results to AgentX , the project's dedicated track for evaluating agentic long-context and multi-turn workloads."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "workflows"
+      ],
+      "score": 10
     },
     {
       "id": "source_e1ecd3de310d348cea22",
@@ -731,7 +771,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "e628223c202c335f126333170f4269a3e81ee0515205e64c60a342b7d39c24ce",
         "snippets": [
@@ -768,7 +808,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-27T02:19:27+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
       "evidence": {
         "text_sha256": "a09431f15503bafc72c5e9fa67d07e5f7a856febd04dedf841e2d7e71e756db1",
         "snippets": [
@@ -783,22 +823,51 @@
         "workflows"
       ],
       "score": 9
+    },
+    {
+      "id": "source_d009dada333dea4ea1eb",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Integrating TorchTPU into TorchTitan and Optimizing Models for TPU",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu",
+        "title": "Integrating TorchTPU into TorchTitan and Optimizing Models for TPU",
+        "published_at": "2026-10-20",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-20"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "evidence": {
+        "text_sha256": "9f43918a90cf140edc2ef5acf8dbaef498b42686ce4d7d235140b0e09000fcb8",
+        "snippets": [
+          "In these workflows, TorchTitan handles the parameter update step while synchronizing weights with high-throughput serving engines like vLLM-TorchTPU.",
+          "GraphTrainer also runs optimization passes: to implement graph-based activation memory policy that decides what to save, recompute or offload.",
+          "Optimize Memory and Batch Size Raise the batch."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "workflows"
+      ],
+      "score": 8
     }
   ],
   "discovery": {
-    "checked_at": "2026-10-27T02:19:27+00:00",
+    "checked_at": "2026-10-28T01:44:33+00:00",
     "source_checks": {
       "OpenAI Cookbook": 10,
       "Anthropic Engineering": 10,
       "Google Developers": 10
     },
-    "errors": [
-      {
-        "source": "Anthropic Engineering",
-        "url": "https://www.anthropic.com/research/claude-code-auto-mode",
-        "error": "TimeoutError"
-      }
-    ],
+    "errors": [],
     "note": "Extracted candidates require human review; collection is not factual/semantic approval."
   }
 }

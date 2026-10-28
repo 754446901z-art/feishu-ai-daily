@@ -21,7 +21,7 @@
         }
       },
       "discovered_at": "2026-10-28T01:44:33+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "31b717fd271de76d7f9bae9bff671f5f585152c5f3236e3f2739dfa383b225f9",
         "snippets": [
@@ -59,7 +59,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "c7ed4cbdd8c1ef8fcbb40825cdd3883fb196d41b2ae4d825d3529ee190d33b2c",
         "snippets": [
@@ -96,7 +96,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "c9adf9b073edddd0e508b5db2c1ffc9b6a0800e7ebf32698767e4de77d1230ca",
         "snippets": [
@@ -132,7 +132,7 @@
         }
       },
       "discovered_at": "2026-10-28T01:44:33+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "a010790e3be5ee0650dcd8e0a07074bd71a0c313148f229934405e2d79057658",
         "snippets": [
@@ -169,7 +169,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "a0d75ffc1655f942199140313879c471c2acff1abc859cc3c78849db2ada42c3",
         "snippets": [
@@ -206,7 +206,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "10d7da585d4226cebb800897dbea7bf973378e1175162cfdcc55711888a7a111",
         "snippets": [
@@ -242,7 +242,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "45a409545ad159695a3eb3630107db7287b0f28b4ad1b70ed314be7360de0888",
         "snippets": [
@@ -354,7 +354,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "5253d6f4d467caab9be34ef317b7fca42648cdfdcb8d7894fb20c5b5dcfcb5ef",
         "snippets": [
@@ -393,7 +393,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "899464e802360a3313dffb296bbf2891477f5c31caaea6f33f52defa4824f772",
         "snippets": [
@@ -432,7 +432,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "dd91a5e7b2813ddfb2458c6678bbca6c4a0cdb699ef580a9b834774917e2035b",
         "snippets": [
@@ -470,7 +470,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "60eaafa35c7f7607aa3832fb733ca62a561efae64fbc5e643451c246dfc6033a",
         "snippets": [
@@ -507,7 +507,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "584c3a992f92cc9c7225d9258816aefd28f495ac1871996539daa837bf458af0",
         "snippets": [
@@ -546,7 +546,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "084bac5a636b760c58778f0be4122fed042b91a3abcb49b2d8a5bc126332b1d1",
         "snippets": [
@@ -584,7 +584,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "1f62c17bdcd09c194786d63fa80efe9673949c744f570cd8045a97d9b8cabf84",
         "snippets": [
@@ -622,7 +622,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "0b8700ce9cd957790e94b112a4e6cc7b2d890db437ea5b1f17691580930015e1",
         "snippets": [
@@ -660,7 +660,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "ca045f37288bbf1f35d35ac3effeae0dc198738f48b892d5594e1eb39913b63c",
         "snippets": [
@@ -697,7 +697,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "edb6ed7913c7979a2e7ce23c2895588ce91e45d3f21d3b5952a9e02191a0191e",
         "snippets": [
@@ -733,7 +733,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "e0d004ec2b944f5ebc9356415f74fd350d1f2c8a60e5b8331535a2265fd1ec25",
         "snippets": [
@@ -771,7 +771,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "e628223c202c335f126333170f4269a3e81ee0515205e64c60a342b7d39c24ce",
         "snippets": [
@@ -808,7 +808,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "a09431f15503bafc72c5e9fa67d07e5f7a856febd04dedf841e2d7e71e756db1",
         "snippets": [
@@ -844,7 +844,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T01:44:33+00:00",
+      "last_checked_at": "2026-10-28T07:45:42+00:00",
       "evidence": {
         "text_sha256": "9f43918a90cf140edc2ef5acf8dbaef498b42686ce4d7d235140b0e09000fcb8",
         "snippets": [
@@ -861,7 +861,7 @@
     }
   ],
   "discovery": {
-    "checked_at": "2026-10-28T01:44:33+00:00",
+    "checked_at": "2026-10-28T07:45:42+00:00",
     "source_checks": {
       "OpenAI Cookbook": 10,
       "Anthropic Engineering": 10,

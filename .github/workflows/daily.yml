@@ -9,8 +9,9 @@ on:
         required: true
         default: true
   schedule:
-    # UTC 01:00 = 北京时间 09:00。GitHub 定时任务可能排队延迟。
-    - cron: "0 1 * * *"
+    # UTC 01:00 = 北京时间 09:00；09:17、09:37、09:57 兜底。
+    # GitHub 定时任务可能延迟或漏触发；同日成功后由持久状态阻止重复发送。
+    - cron: "0,17,37,57 1 * * *"
 
 permissions:
   contents: write

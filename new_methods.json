@@ -21,7 +21,7 @@
         }
       },
       "discovered_at": "2026-10-28T01:44:33+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "31b717fd271de76d7f9bae9bff671f5f585152c5f3236e3f2739dfa383b225f9",
         "snippets": [
@@ -59,7 +59,7 @@
         }
       },
       "discovered_at": "2026-10-29T01:29:35+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "38a194f12d513b3575ddd88e0c796e6e7850551acca75fba15cec06df43e7161",
         "snippets": [
@@ -96,7 +96,7 @@
         }
       },
       "discovered_at": "2026-10-29T01:29:35+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "ee2c79cb4659c599714edc494482b912419bf84db3b214aec837451643f1a09b",
         "snippets": [
@@ -133,7 +133,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "c7ed4cbdd8c1ef8fcbb40825cdd3883fb196d41b2ae4d825d3529ee190d33b2c",
         "snippets": [
@@ -170,9 +170,9 @@
         }
       },
       "discovered_at": "2026-10-28T01:44:33+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
-        "text_sha256": "a010790e3be5ee0650dcd8e0a07074bd71a0c313148f229934405e2d79057658",
+        "text_sha256": "71ecac997f49a45255edcbe1f20c5b7207cea8277b616c4ea5e7070484fea4c7",
         "snippets": [
           "With this release, we’re happy to introduce swappable inference formats and share examples on leveraging decision models with A2UI, which help building faster and more reliable generative UI experiences.",
           "A2UI is an agent-optimized protocol for generative UI, where a client advertises a catalog of trusted components as a contract, an agent sends A2UI messages describing a bespoke user interface composed from that catalog, and the client's re",
@@ -188,76 +188,77 @@
       "score": 11
     },
     {
-      "id": "source_9ae640307e4c2532e538",
+      "id": "source_d5539188b36664e1dee6",
       "method_key": null,
       "status": "pending_review",
-      "name": "Architecting Governed, Self-Evolving AI Agents on Google Cloud",
+      "name": "Build Generative UI Apps with A2UI & CopilotKit Agents",
       "principle": null,
       "scenarios": [],
       "steps": [],
       "example_prompt": null,
       "source": {
         "name": "Google Developers",
-        "url": "https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform",
-        "title": "Architecting Governed, Self-Evolving AI Agents on Google Cloud",
-        "published_at": "2026-10-22",
+        "url": "https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents",
+        "title": "Build Generative UI Apps with A2UI & CopilotKit Agents",
+        "published_at": "2026-10-29",
         "date_evidence": {
           "kind": "datePublished",
-          "value": "2026-10-22"
+          "value": "2026-10-29"
         }
       },
-      "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "discovered_at": "2026-10-30T01:00:14+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
-        "text_sha256": "a0d75ffc1655f942199140313879c471c2acff1abc859cc3c78849db2ada42c3",
+        "text_sha256": "13b01975354c221954f2cd1bcab00c928f436fde2bd298512e53c1e61216ea6f",
         "snippets": [
-          "An on-call engineer battling connection pool starvation does not need an AI agent offering troubleshooting tips or unverified pull requests that might not fix the root cause; they need a governed, self-evolving AI system that can: Diagnose ",
-          "How a Self-Evolving Agent Adapts Over Time Conventional AI agents are frozen at deployment with fixed system prompts and pre-registered tools.",
-          "Every synthesized patch, distilled memory, and topology update must clear four sequential verification boundaries: Ingress & AST Sandbox Sanitization: Before any telemetry alert enters the agent reasoning loop, Model Armor screens payloads "
+          "Call generate_a2ui to show results.\", ) adk_agent = ADKAgent( adk_agent=root_agent, app_name=\"flights\", user_id=\"demo_user\", use_in_memory_services=True, ) app = FastAPI() add_adk_fastapi_endpoint(app, adk_agent, path=\"/\") Python Copied On ",
+          "Generation in a dedicated sub-agent: the catalog and protocol rules stay out of your main agent's context window, and the surface streams to the client as the sub-agent produces it.",
+          "A2UI Composer CopilotKit A2UI Docs Use A2UI with Any Agent Framework & Harness Explore how to build Generative UI Agents with CopilotKit , or dive into A2UI documentation to learn how to integrate A2UI with any framework of your choice."
         ]
       },
       "review": null,
       "topics": [
         "agents",
-        "context",
-        "prompting"
+        "context"
       ],
-      "score": 11
+      "score": 10
     },
     {
-      "id": "source_dc1c2bd41b84d39a937b",
+      "id": "source_336157a62f235b2aa418",
       "method_key": null,
       "status": "pending_review",
-      "name": "Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec",
+      "name": "Route customer-support messages with the Decisions API",
       "principle": null,
       "scenarios": [],
       "steps": [],
       "example_prompt": null,
       "source": {
-        "name": "Google Developers",
-        "url": "https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec",
-        "title": "Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec",
-        "published_at": "2026-10-22",
+        "name": "OpenAI Cookbook",
+        "url": "https://developers.openai.com/cookbook/examples/decisions/customer_request_routing",
+        "title": "Route customer-support messages with the Decisions API",
+        "published_at": "2026-10-27",
         "date_evidence": {
-          "kind": "datePublished",
-          "value": "2026-10-22"
+          "kind": "index:published",
+          "value": "2026-10-27",
+          "url": "https://developers.openai.com/cookbook"
         }
       },
-      "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "discovered_at": "2026-10-30T01:00:14+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
-        "text_sha256": "10d7da585d4226cebb800897dbea7bf973378e1175162cfdcc55711888a7a111",
+        "text_sha256": "51130a73667ce176b9e48b0ff53bfd6f9ba300cee281a1d59e209b459653513a",
         "snippets": [
-          "An agent working through a multi-step task reports progress as it goes.",
-          "These AI gateway capabilities allow teams to monitor, secure and control agentic traffic of tools, models and agents in their ecosystem, and they're delivered as a composable suite so you can choose the right gateway for each use case.",
-          "You can also combine these gateways: API Gateway or Apigee can sit in front of your agents and APIs, or behind Agent Gateway so your agents can reach models, tools, and MCP servers."
+          "build_request(message) supplies a model, the input message, and a question named route .",
+          "with warnings.catch_warnings(): warnings.simplefilter( \"error\" , getpass.GetPassWarning) api_key = getpass.getpass( \"OpenAI API key (hidden): \" ) if not api_key: raise RuntimeError ( \"No key supplied; no model requests were made\" ) for inde",
+          "These ten public examples demonstrate the workflow, not production accuracy."
         ]
       },
       "review": null,
       "topics": [
-        "agents"
+        "prompting",
+        "workflows"
       ],
-      "score": 7
+      "score": 9
     },
     {
       "id": "source_920832100ebd788851d1",
@@ -280,7 +281,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "45a409545ad159695a3eb3630107db7287b0f28b4ad1b70ed314be7360de0888",
         "snippets": [
@@ -392,7 +393,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "5253d6f4d467caab9be34ef317b7fca42648cdfdcb8d7894fb20c5b5dcfcb5ef",
         "snippets": [
@@ -431,7 +432,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "899464e802360a3313dffb296bbf2891477f5c31caaea6f33f52defa4824f772",
         "snippets": [
@@ -470,7 +471,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "dd91a5e7b2813ddfb2458c6678bbca6c4a0cdb699ef580a9b834774917e2035b",
         "snippets": [
@@ -545,7 +546,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "584c3a992f92cc9c7225d9258816aefd28f495ac1871996539daa837bf458af0",
         "snippets": [
@@ -584,7 +585,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "084bac5a636b760c58778f0be4122fed042b91a3abcb49b2d8a5bc126332b1d1",
         "snippets": [
@@ -622,7 +623,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "1f62c17bdcd09c194786d63fa80efe9673949c744f570cd8045a97d9b8cabf84",
         "snippets": [
@@ -660,7 +661,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "0b8700ce9cd957790e94b112a4e6cc7b2d890db437ea5b1f17691580930015e1",
         "snippets": [
@@ -697,7 +698,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "c9adf9b073edddd0e508b5db2c1ffc9b6a0800e7ebf32698767e4de77d1230ca",
         "snippets": [
@@ -734,7 +735,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "ca045f37288bbf1f35d35ac3effeae0dc198738f48b892d5594e1eb39913b63c",
         "snippets": [
@@ -750,6 +751,43 @@
         "workflows"
       ],
       "score": 12
+    },
+    {
+      "id": "source_9ae640307e4c2532e538",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Architecting Governed, Self-Evolving AI Agents on Google Cloud",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform",
+        "title": "Architecting Governed, Self-Evolving AI Agents on Google Cloud",
+        "published_at": "2026-10-22",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-22"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
+      "evidence": {
+        "text_sha256": "a0d75ffc1655f942199140313879c471c2acff1abc859cc3c78849db2ada42c3",
+        "snippets": [
+          "An on-call engineer battling connection pool starvation does not need an AI agent offering troubleshooting tips or unverified pull requests that might not fix the root cause; they need a governed, self-evolving AI system that can: Diagnose ",
+          "How a Self-Evolving Agent Adapts Over Time Conventional AI agents are frozen at deployment with fixed system prompts and pre-registered tools.",
+          "Every synthesized patch, distilled memory, and topology update must clear four sequential verification boundaries: Ingress & AST Sandbox Sanitization: Before any telemetry alert enters the agent reasoning loop, Model Armor screens payloads "
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents",
+        "context",
+        "prompting"
+      ],
+      "score": 11
     },
     {
       "id": "source_0490afc86481e7ffbbdd",
@@ -771,7 +809,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-28T07:45:42+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "edb6ed7913c7979a2e7ce23c2895588ce91e45d3f21d3b5952a9e02191a0191e",
         "snippets": [
@@ -845,7 +883,7 @@
         }
       },
       "discovered_at": "2026-10-27T02:16:07+00:00",
-      "last_checked_at": "2026-10-29T06:46:57+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
       "evidence": {
         "text_sha256": "e628223c202c335f126333170f4269a3e81ee0515205e64c60a342b7d39c24ce",
         "snippets": [
@@ -932,10 +970,45 @@
         "workflows"
       ],
       "score": 8
+    },
+    {
+      "id": "source_dc1c2bd41b84d39a937b",
+      "method_key": null,
+      "status": "pending_review",
+      "name": "Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec",
+      "principle": null,
+      "scenarios": [],
+      "steps": [],
+      "example_prompt": null,
+      "source": {
+        "name": "Google Developers",
+        "url": "https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec",
+        "title": "Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec",
+        "published_at": "2026-10-22",
+        "date_evidence": {
+          "kind": "datePublished",
+          "value": "2026-10-22"
+        }
+      },
+      "discovered_at": "2026-10-27T02:16:07+00:00",
+      "last_checked_at": "2026-10-30T01:00:14+00:00",
+      "evidence": {
+        "text_sha256": "10d7da585d4226cebb800897dbea7bf973378e1175162cfdcc55711888a7a111",
+        "snippets": [
+          "An agent working through a multi-step task reports progress as it goes.",
+          "These AI gateway capabilities allow teams to monitor, secure and control agentic traffic of tools, models and agents in their ecosystem, and they're delivered as a composable suite so you can choose the right gateway for each use case.",
+          "You can also combine these gateways: API Gateway or Apigee can sit in front of your agents and APIs, or behind Agent Gateway so your agents can reach models, tools, and MCP servers."
+        ]
+      },
+      "review": null,
+      "topics": [
+        "agents"
+      ],
+      "score": 7
     }
   ],
   "discovery": {
-    "checked_at": "2026-10-29T06:46:57+00:00",
+    "checked_at": "2026-10-30T01:00:14+00:00",
     "source_checks": {
       "OpenAI Cookbook": 10,
       "Anthropic Engineering": 10,
